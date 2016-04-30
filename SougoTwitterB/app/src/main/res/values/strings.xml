@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SougoTwitterB</string>
+
+    <string name="APIKEY">dL6rCBrNJxhcwsKp7tV41pw6c</string>
+    <string name="APISECRET">rpYgwlbkIljALNIDqYc3uJAW6xVC2b24BspFU4SH5UoZY8jXkq</string>
+
+    <string name="main_button">相互しようよボタン</string>
+</resources>
