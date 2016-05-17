@@ -5,4 +5,5 @@
     <string name="APISECRET">rpYgwlbkIljALNIDqYc3uJAW6xVC2b24BspFU4SH5UoZY8jXkq</string>
 
     <string name="main_button">相互しようよボタン</string>
+    <string name="gcm_cantUse">お使いの端末ではご利用できません。</string>
 </resources>

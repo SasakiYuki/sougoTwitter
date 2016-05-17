@@ -44,6 +44,8 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
     compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
 }
 buildscript {
     ext.kotlin_version = '1.0.1-2'

@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="wacode.yuki.sougotwitterb">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="wacode.yuki.sougotwitterb.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="wacode.yuki.sougotwitterb.permission.C2D_MESSAGE" />
+    <uses-permission android:name="wacode.yuki.sougotwitterb.c2dm.permission.RECEIVE" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +27,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OAuthActivity"></activity>
+        <activity android:name=".OAuthActivity" />
+
+        <receiver
+            android:name=".Gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.blackcat.gcmsample" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".Gcm.GcmIntentService" />
+
     </application>
 
 </manifest>
